@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * print-alphabet - Entry point
+ * print_alphabet - Entry point
  * Description: prints lowercase alphabets
  * Return: 0 (Success)
  */
-void print_alphabet(void);
+void print_alphabet(void)
 {
 int i;
 for (i = 97; i <= 122; i++)

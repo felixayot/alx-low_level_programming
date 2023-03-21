@@ -6,13 +6,13 @@
  */
 int main(void)
 {
-int fib1 = 1, fib2 = 2, nextFib, count = 0;
-printf("%d, %d, ", fib1, fib2);
+long long fib1 = 1, fib2 = 2, nextFib, count = 0;
+printf("%lld, %lld, ", fib1, fib2);
 count = 2;
 while (count < 50)
 {
 nextFib = fib1 + fib2;
-printf("%d", nextFib);
+printf("%lld", nextFib);
 if (count != 49)
 {
 printf(", ");

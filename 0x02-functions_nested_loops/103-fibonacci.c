@@ -12,11 +12,11 @@ int a = 1;
 int b = 2;
 while (b <= limit)
 {
+int next_term = a + b;
 if (b % 2 == 0)
 {
 sum += b;
 }
-int next_term = a + b;
 a = b;
 b = next_term;
 }
