@@ -6,15 +6,18 @@
 #include <stddef.h>
 
 /**
- * struct node - data structure for linked list
- * @str: pointer to a char
- * @next: struct node for next node
- * Description: defines a new type struct dog
+ * struct list_s - singly linked list
+ * @str: string - (malloc'ed string)
+ * @len: length of the string
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
  */
-typedef struct node
+typedef struct list_s
 {
-char *str;
-struct node *next;
+    char *str;
+    unsigned int len;
+    struct list_s *next;
 } list_t;
 
 size_t print_list(const list_t *h);
