@@ -1,5 +1,6 @@
 #ifndef _DOG_HEADER_H_
 #define _DOG_HEADER_H_
+
 /**
  * struct dog - Structure type
  * @name: pointer to a char
