@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
-  * main - Entry point
-  * Description: This prints all possible different combinations of 3 dgts
-  * Return: 0 (Success)
-  */
+ * main - Entry point
+ * Description: This prints all possible different combinations of 3 dgts
+ * Return: 0 (Success)
+ */
 int main(void)
 {
 int c;
@@ -23,7 +23,7 @@ putchar('0' + e);
 putchar('0' + d);
 if (c + d + e != 9 + 8 + 7)
 {
-putchar('.');
+putchar(',');
 putchar(' ');
 }
 }
