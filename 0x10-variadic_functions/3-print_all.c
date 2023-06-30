@@ -1,5 +1,65 @@
 #include "variadic_functions.h"
-#include <stdio.h>
+/**
+ * print_char - Function prototype
+ * Description: Prints a char.
+ * @arg: A list of arguments pointing to
+ * the character to be printed.
+ * Return: void
+ */
+void print_char(va_list arg)
+{
+char letter;
+letter = va_arg(arg, int);
+printf("%c", letter);
+}
+
+/**
+ * print_int - Function prototype
+ * Description: Prints an int.
+ * @arg: A list of arguments pointing to
+ * the integer to be printed.
+ * Return: void
+ */
+void print_int(va_list arg)
+{
+int num;
+num = va_arg(arg, int);
+printf("%d", num);
+}
+
+/**
+ * print_float - Function prototype
+ * Description: Prints a float.
+ * @arg: A list of arguments pointing to
+ * the float to be printed.
+ * Return: void
+ */
+void print_float(va_list arg)
+{
+float num;
+num = va_arg(arg, double);
+printf("%f", num);
+}
+
+/**
+ * print_string - Function prototype
+ * Description: Prints a string.
+ * @arg: A list of arguments pointing to
+ * the string to be printed.
+ * Return: void
+ */
+void print_string(va_list arg)
+{
+char *str;
+str = va_arg(arg, char *);
+if (str == NULL)
+{
+printf("(nil)");
+return;
+}
+printf("%s", str);
+}
+
 /**
  * print_all - Function prototype
  * Description: prints anything.
@@ -9,49 +69,27 @@
 void print_all(const char * const format, ...)
 {
 va_list args;
-const char *p = format;
-int i_val;
-double d_val;
-char *s_val;
-char c_val;
-int first = 1;
+int i = 0, j = 0;
+char *separator = "";
+printer_t funcs[] = {
+{"c", print_char},
+{"i", print_int},
+{"f", print_float},
+{"s", print_string}
+};
 va_start(args, format);
-while (*p)
+while (format && (*(format + i)))
 {
-if (!first && (*(p - 1) == 'c' || *(p - 1) == 'i' || *(p - 1) == 'f' || *(p - 1) == 's'))
+j = 0;
+while (j < 4 && (*(format + i) != *(funcs[j].symbol)))
+j++;
+if (j < 4)
 {
-printf(", ");
+printf("%s", separator);
+funcs[j].print(args);
+separator = ", ";
 }
-first = 0;
-switch (*p)
-{
-case 'c':
-c_val = va_arg(args, int);
-printf("%c", c_val);
-break;
-case 'i':
-i_val = va_arg(args, int);
-printf("%d", i_val);
-break;
-case 'f':
-d_val = va_arg(args, double);
-printf("%f", d_val);
-break;
-case 's':
-s_val = va_arg(args, char *);
-if (s_val == NULL)
-{
-printf("(nil)");
-}
-else
-{
-printf("%s", s_val);
-}
-break;
-default:
-break;
-}
-p++;
+i++;
 }
 printf("\n");
 va_end(args);
