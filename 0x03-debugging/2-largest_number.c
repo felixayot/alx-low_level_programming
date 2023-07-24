@@ -11,15 +11,18 @@
 int largest_number(int a, int b, int c)
 {
 	int largest;
-
+/* Check if a is the greatest */
 	if (a > b && a > c)
 	{
 		largest = a;
 	}
+/* 1st condition is FALSE, compare b to c */
 	else if (b > c)
 	{
 		largest = b;
 	}
+/* 2nd condition is also FALSE, hence c is the greatest */
+/* this condition is the catch-all for all the previous checks */
 	else
 	{
 		largest = c;
