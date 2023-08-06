@@ -19,6 +19,6 @@ name = d->name != NULL ? d->name : "(nil)";
 age = d->age;
 owner = d->owner != NULL ? d->owner : "(nil)";
 printf("Name: %s\n", name);
-printf("Age: %.6g\n", age);
+printf("Age: %f\n", age);
 printf("Owner: %s\n", owner);
 }
