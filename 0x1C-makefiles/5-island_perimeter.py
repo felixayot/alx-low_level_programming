@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """5-island_perimeter.py module for island_perimeter function."""
 
+
 def island_perimeter(grid):
     """Returns the perimeter of the island described in grid:
         0 represents a water zone
