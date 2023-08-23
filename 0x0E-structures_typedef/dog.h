@@ -1,5 +1,5 @@
-#ifndef _DOG_HEADER_H_
-#define _DOG_HEADER_H_
+#ifndef _DOG_H_
+#define _DOG_H_
 
 #include <stddef.h>
 
@@ -27,4 +27,4 @@ void print_dog(struct dog *d);
 dog_t *new_dog(char *name, float age, char *owner);
 void free_dog(dog_t *d);
 
-#endif
+#endif /* _DOG_H_ */
