@@ -27,6 +27,7 @@ programming language. I was taken through the following concepts to help me unde
 - **More singly linked lists**
 - **Doubly linked lists**
 - **Hash tables**
+- **Makefiles**
 
 # Author
 
