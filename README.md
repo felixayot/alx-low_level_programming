@@ -1,7 +1,7 @@
 # Low-level Programming
 
 In this section, I learnt about the C Programming Language which is a general-purpose computer programming language. It is also a low level and compiled
-programming language. I was taken through the following concepts to help me understand the hatching out, data structures, and algorithms of the language.
+programming language. I was taken through the following concepts to help me understand the hatching out(basic syntax, variables, data types, functions, conditional logics e.t.c), data structures, and algorithms of the language.
 
 - **Hello, World**
 - **Variables, if, else, while and for loops**
@@ -28,6 +28,7 @@ programming language. I was taken through the following concepts to help me unde
 - **Doubly linked lists**
 - **Hash tables**
 - **Makefiles**
+- **Search Algorithms**
 
 # Author
 
